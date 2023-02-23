@@ -1,7 +1,7 @@
 #masthead {
   height: 100vh;
   min-height: 300px;
-  background-image: url('https://github.com/ktan46/my-portfolio/blob/e8d050845dd0091d5a9b6926072af7742ed97287/images/Seamless-Hexagonal-Wireframe-Geometric-Pattern.svg?sanitize=true');
+  background-image: url('./images/261720.png');
   background-color: white;
   background-size: cover;
   background-position: center;
@@ -12,7 +12,7 @@
 #footer {
   height: 100vh;
   min-height: 100px;
-  background-image: url('images/wave.svg');
+  background-image: url('./images/wave.svg');
   background-color: white;
   background-size: cover;
   background-position: center;
