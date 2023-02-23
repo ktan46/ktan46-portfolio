@@ -2,88 +2,94 @@
 <html lang="en">
   <head>
     <title>Kyle Tan</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-      .navbar {
-        margin-bottom: 0;
-        border-radius: 0;
-      }
-      
-      footer {
-        background-color: rgb(16, 16, 16);
-        padding: 25px;
-      }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+          crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
   </head>
+
   <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="index.html">Kyle Tan</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 sticky-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <h2>Kyle Tan</h2>
+        </a>
+
+        <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#project-info" class="nav-link"><h4>Projects</h4></a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact-info" class="nav-link"><h4>Contact Me</h4></a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="jumbotron">
-      <div class="container text-center">
-        <h1 id="intro"></h1>
-      </div>
-    </div>
-      
-    <div class="container-fluid bg-3 text-center">    
-      <div class="row">
-        <div class="col-sm-3">
-          <p>rogue game.</p>
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3"> 
-          <p>Some text..</p>
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3"> 
-          <p>Some text..</p>
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        </div>
-        <div class="col-sm-3">
-          <p>Some text..</p>
-          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <!-- Intro Banner -->
+    <header id="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 style="font-size:100px">Hello there!</h1>
+            <h2 id="intro"></h2>
+          </div>
         </div>
       </div>
-    </div><br><br>
+    </header>
 
-    <footer class="container-fluid text-center">
-      <p class="text-muted">Copyleft 2023</p>
+    <!-- Project Showcase -->
+    <header id="project-info">
+      <div class="container h-100">
+
+      </div>
+    </header>
+    <!-- Contact Info -->
+    <footer id="contact-info" class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <h3>Contact Me At</h3>
+        <div class="media-btn">
+          <a href="" class="linkedin">1</a>
+          <a href="" class="github">2</a>
+          <a href="" class="email">3</a>
+        </div>
+      </div>
     </footer>
-    <!-- JavaScript for Intro Typewriter Effect Message-->
+    
     <script>
       var i = 0;
-      var txt_1 = 'Hello, and welcome! My name is Kyle, and welcome to my website!\n';
-      var speed = 77; /* The speed/duration of the effect in milliseconds */
+      var txt = "I'm Kyle Tan, a 2B Honours Mathematics student studying at the University of Waterloo, as well as an aspiring software developer with an interest in machine learning!"; /* The text */
+      var speed = 65; /* lower the faster */
 
       function typeWriter() {
-        if (i < (txt_1).length) {
-          document.getElementById("intro").innerHTML += (txt_1).charAt(i);
+        if (i < txt.length) {
+          document.getElementById("intro").innerHTML += txt.charAt(i);
           i++;
           setTimeout(typeWriter, speed);
         }
       }
       typeWriter();
+      
+    </script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+      crossorigin="anonymous">
     </script>
 
   </body>
